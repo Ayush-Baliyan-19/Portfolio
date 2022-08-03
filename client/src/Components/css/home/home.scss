@@ -1,0 +1,17 @@
+.home{
+    background-image:linear-gradient(to right, #f8f8f8 50%, rgba(109, 172, 228,0.2) 50%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: poppins;
+    h2{
+        color: #1a5b94;
+        font-weight: bold;
+    }
+    p{
+        font-size: x-large;
+        color: #283b4c;
+    }
+}

@@ -1,0 +1,58 @@
+.error {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  height: 90vh;
+  font-family: poppins;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 20vw;
+  z-index: -3;
+  opacity: 0.1;
+  position: absolute;
+}
+
+h2 p .error-button {
+  position: absolute;
+}
+
+h2 {
+  color: black;
+  font-weight: bolder;
+  font-size: 2.5vw;
+  text-transform: capitalize;
+}
+
+.error-p {
+  width: 55%;
+  text-align: center;
+}
+
+.error-button {
+  border: 1px solid #6dabe4;
+  background: #6dabe4;
+  color: white;
+  padding: 2vh;
+  text-decoration: none;
+  border-radius: 30px;
+}
+
+.error-button:hover {
+  color: #6dabe4;
+  background: transparent;
+  border: 1px solid #6dabe4;
+}
+/*# sourceMappingURL=error.css.map */

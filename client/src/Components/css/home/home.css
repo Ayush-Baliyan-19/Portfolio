@@ -1,0 +1,30 @@
+.home {
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #f8f8f8), color-stop(50%, rgba(109, 172, 228, 0.2)));
+  background-image: linear-gradient(to right, #f8f8f8 50%, rgba(109, 172, 228, 0.2) 50%);
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: poppins;
+}
+
+.home h2 {
+  color: #1a5b94;
+  font-weight: bold;
+}
+
+.home p {
+  font-size: x-large;
+  color: #283b4c;
+}
+/*# sourceMappingURL=home.css.map */
