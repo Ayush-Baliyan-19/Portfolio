@@ -1,9 +1,21 @@
-import React from "react";
+import React, { useEffect,useContext} from "react";
+import Authcontext from '../Contexts/AuthContext'
 import me from "./images/Me.png";
 import "./css/About/about.css";
+import { Navigate } from "react-router-dom";
+// import jwt from "jsonwebtoken"
+
 const About = () => {
-  return (
-    <div>
+  const authcontext= useContext(Authcontext)
+  const {authorised} = authcontext;
+
+  // useEffect(()=>{
+  //   jwt.verify()
+  // },[])
+  if(authorised)
+  {
+    return (
+      <div>
       <section className="about">
         <div className="about-image">
           <div className="popout">
@@ -25,8 +37,8 @@ const About = () => {
           </div>
         </div>
         <div className="aboutme">
-          <h2>Himesh Nayak</h2>
-          <h5>Gdsc-Lead</h5>
+          <h2>Ayush Baliyan</h2>
+          <h5>Web Developer</h5>
           <p>
             I am a first year CSE Undergrad Student, currently learning Mern
             Stack And The Relate Stuff. Hope You Like The Site And Give Me A
@@ -87,6 +99,12 @@ const About = () => {
       </section>
     </div>
   );
+}
+else{
+  return (
+    <Navigate to='/login'/>
+  )
+}
 };
 
 export default About;

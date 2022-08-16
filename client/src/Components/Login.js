@@ -1,8 +1,13 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import React, {useContext}from 'react'
+import { useNavigate} from 'react-router-dom'
 import './css/login/login.css'
+import Authcontext from '../Contexts/AuthContext'
 import loginimage from './images/signin-image.jpg'
 const Login = () => {
+
+  const authcontext= useContext(Authcontext)
+  console.log(authcontext)
+
   const Navigate=useNavigate();
   const [user,setUser]=React.useState({
     email:"",
@@ -21,21 +26,25 @@ const Login = () => {
   const postlogin= async (e) => {
     e.preventDefault()
     const {email,pass} = user;
-    const res= await fetch('/signin',
+    let res= await fetch('http://localhost:5000/login',
     { method: "POST",
       headers:{
         "Content-Type": "application/json"
       },
+      referrerPolicy: "origin-when-cross-origin",
       body:JSON.stringify({email:email,pass:pass})
     }
     );
-    console.log(res);
+    // res=res.json()
+    const response = await res.json()
+    console.log(response.token);
     if(res.status===400 || res.status===500 )
     {
       window.alert("Invalid Credentials or User does not exist");
     }
     else{
       window.alert("Login Succesfull");
+      authcontext.authorised=true;
       Navigate('/');
     } 
   }
