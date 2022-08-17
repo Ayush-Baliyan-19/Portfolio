@@ -37,13 +37,14 @@ const Login = () => {
     );
     // res=res.json()
     const response = await res.json()
-    console.log(response.token);
+    console.log(response.token)
     if(res.status===400 || res.status===500 )
     {
       window.alert("Invalid Credentials or User does not exist");
     }
     else{
       window.alert("Login Succesfull");
+      window.localStorage.setItem("token",response.token)
       authcontext.authorised=true;
       Navigate('/');
     } 

@@ -1,19 +1,8 @@
-import React, { useEffect,useContext} from "react";
-import Authcontext from '../Contexts/AuthContext'
 import me from "./images/Me.png";
 import "./css/About/about.css";
-import { Navigate } from "react-router-dom";
-// import jwt from "jsonwebtoken"
 
 const About = () => {
-  const authcontext= useContext(Authcontext)
-  const {authorised} = authcontext;
 
-  // useEffect(()=>{
-  //   jwt.verify()
-  // },[])
-  if(authorised)
-  {
     return (
       <div>
       <section className="about">
@@ -99,12 +88,5 @@ const About = () => {
       </section>
     </div>
   );
-}
-else{
-  return (
-    <Navigate to='/login'/>
-  )
-}
 };
-
 export default About;
