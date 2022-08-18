@@ -21,12 +21,12 @@ const Navbar = () => {
         <li className="nav-item mx-2">
           <Link className="nav-link" to="/about">About</Link>
         </li>
-        {/* <li className="nav-item mx-2">
+        <li className="nav-item mx-2">
           <Link className="nav-link" to="/login">Login</Link>
         </li>
         <li className="nav-item mx-2">
           <Link className="nav-link" to="/signup">Registration</Link>
-        </li> */}
+        </li>
         <li className="nav-item mx-2">
           <Link className="nav-link" to="/contact">Contact</Link>
         </li>
