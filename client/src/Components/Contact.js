@@ -22,7 +22,7 @@ const Contact = () => {
   const sendmail= async (e)=>{
     e.preventDefault()
     const {name,email,message}=user;
-    const res= await fetch('/mail',{
+    const res= await fetch('https://authking.herokuapp.com/mail',{
       method:"POST",
       headers:{
         "Content-type":"application/json"
