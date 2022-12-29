@@ -1,16 +1,16 @@
 import me from "./images/Me.png";
 import "./css/About/about.css";
-import { useEffect } from "react";
-import { Navigate } from "react-router-dom";
+// import { useEffect } from "react";
+// import { Navigate } from "react-router-dom";
 
-var token;
+// var token;
 const About = () => {
-  useEffect(() => {
-    token = window.localStorage.getItem("token")
-    console.log(token)
-  })
+//   useEffect(() => {
+//     token = window.localStorage.getItem("token")
+//     console.log(token)
+//   })
 
-  if (token) {
+  // if (token) {
     return (
       <div>
         <section className="about">
@@ -37,9 +37,10 @@ const About = () => {
             <h2>Ayush Baliyan</h2>
             <h5>Web Developer</h5>
             <p>
-              I am a first year CSE Undergrad Student, currently learning Mern
-              Stack And The Relate Stuff. Hope You Like The Site And Give Me A
-              Follow At Github &#128512;
+            Second-year CSE student, aspiring SDE. My passion for writing codes and diving deep into the computer world brought me to the University School of Information, Communication, and Technology, where I am currently getting the most experience of being a web developer and a graphic designer. Last year I completed the MERN Stack Development, which let me get exposure to being a full stack developer.
+            
+            This year I am exploring different fields like WEB-3, Game Development, Cyber Security etc.
+            &#128512;
             </p>
           </div>
         </section>
@@ -48,28 +49,23 @@ const About = () => {
           <div className="skills">
             <h2>Skills:</h2>
             <ul>
-              <li>CSS</li>
-              <li>JAVASCRIPT</li>
-              <li>REACT</li>
-              <li>C++</li>
-              <li>DSA</li>
+              <li>MERN Stack</li>
+              <li>Unity Game Development</li>
+              <li>Graphic Designing</li>
+              <li>UI/UX</li>
             </ul>
           </div>
           <div className="timelinee" >
-
-
             <ul className="timeline">
-
               <li>
                 <div className="direction-r">
                   <div className="flag-wrapper">
                     <span className="flag">SDC-USICT</span>
                     <span className="time-wrapper"><span className="time">2021 - Present</span></span>
                   </div>
-                  <div className="desc">One Of the finest Tech Club in USICT which maintains all of th Ipu's Websites</div>
+                  <div className="desc">One Of the finest Tech Club in USICT which maintains all of the development in the univeristy varying from Developing University's Website to Developing Products</div>
                 </div>
               </li>
-
               <li>
                 <div className="direction-r">
                   <div className="flag-wrapper">
@@ -97,11 +93,11 @@ const About = () => {
       </div>
     );
   }
-  else {
-    return (
-      <Navigate to='/login' />
-    )
-  }
-}
+  // else {
+    // return (
+    //   <Navigate to='/login' />
+    // )
+  // }
+// }
   ;
 export default About;

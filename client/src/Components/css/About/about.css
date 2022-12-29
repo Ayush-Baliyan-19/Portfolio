@@ -1,8 +1,3 @@
-/* Inspired by: https://css-tricks.com/lets-create-an-image-pop-out-effect-with-svg-clip-path/
-Note: No techniques from the above article were used. I just thought of a different way to achieve the same idea.
-
-background pattern modified by one presented at: https://projects.verou.me/css3patterns/
-*/
 div.popout {
   position: relative;
   float: left;
@@ -117,7 +112,7 @@ div.popout .person .desc:first-line {
 
 .aboutme {
   position: relative;
-  width: 33%;
+  width: 50%;
 }
 
 hr {

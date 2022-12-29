@@ -8,6 +8,7 @@ import Signup from './Components/Signup'
 import Login from './Components/Login'
 import Error from './Components/Error'
 import './App.css'
+import Projects from './Components/Projects'
 const App = () => {
   return (
     <div>
@@ -19,6 +20,7 @@ const App = () => {
         <Route exact path='/login' element={ <Login/> } /> 
         <Route exact path='/signup' element={ <Signup/> } />
         <Route exact path='/Error' element={ <Error/> } />
+        <Route exact path='/Projects' element={<Projects/>} />
       </Routes>
     </div>
   )
