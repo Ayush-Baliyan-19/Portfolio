@@ -162,7 +162,11 @@ export default function Page() {
               </ProjectCardTextContent>
               <ProjectCardFooter>
                 <IconsList>
-                  <IconItem icon="java" />
+                  <IconItem icon="nextjs" />
+                  <IconItem icon="tensorflow" />
+                  <IconItem icon="tailwindcss" />
+                  <IconItem icon="shadcnUI" />
+                  <IconItem icon="SocketIo" />
                 </IconsList>
                 <ProjectCardLinks>
                   <ProjectCardLink
@@ -205,8 +209,11 @@ export default function Page() {
               </ProjectCardTextContent>
               <ProjectCardFooter>
                 <IconsList>
-                  <IconItem icon="php" />
-                  <IconItem icon="symfony" />
+                  <IconItem icon="nextjs" />
+                  <IconItem icon="tailwindcss" />
+                  <IconItem icon="shadcnUI" />
+                  <IconItem icon="SocketIo" />
+                  <IconItem icon="fastApi" />
                 </IconsList>
                 <ProjectCardLinks>
                   <ProjectCardLink
