@@ -56,8 +56,8 @@ export default function Page() {
           <SB icon="shadcnUI">ShadCN</SB>. For the back-end, I specialize in
           <SB icon="nodejs">NodeJS</SB>, <SB icon="express">ExpressJS</SB>, and{" "}
           <SB icon="firebase">Firebase</SB>. I also use <SB icon="git">Git</SB>{" "}
-          and <SB icon="sql">SQL</SB>,<SB icon="postgres">Postgres</SB> for
-          version control and database. For the deployment and hosting of my
+          and <SB icon="sql">SQL</SB>, &nbsp; <SB icon="postgres">Postgres</SB>{" "}
+          for version control and database. For the deployment and hosting of my
           projects, I use <SB icon="vercel">Vercel</SB> and{" "}
           <SB icon="aws">AWS</SB> along with a with a touch of devops with the
           help of <SB icon="docker">Docker</SB> and{" "}
