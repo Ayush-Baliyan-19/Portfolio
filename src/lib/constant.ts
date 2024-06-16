@@ -1,7 +1,7 @@
 export const siteConfig = {
   title: "Ayush Baliyan - Portfolio",
   description:
-    "Full stack developer based in Delhi, India. Passionate about software development for several years.",
+    "Software developer based in Delhi, India. Passionate about software development for several years.",
   keywords: [
     "Ayush Baliyan",
     "portfolio",
