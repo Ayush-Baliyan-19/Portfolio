@@ -220,7 +220,7 @@ export default function Page() {
               </ProjectCardFooter>
             </ProjectCardContent>
           </ProjectCard>
-          <ProjectCard animDelay={0.4}>
+          {/* <ProjectCard animDelay={0.4}>
             <ProjectCardImage
               src="/images/progiso-min.webp"
               width="1920"
@@ -260,7 +260,7 @@ export default function Page() {
                 </ProjectCardLinks>
               </ProjectCardFooter>
             </ProjectCardContent>
-          </ProjectCard>
+          </ProjectCard> */}
         </SectionProjectsContent>
       </SectionProjects>
       <Footer />
