@@ -210,7 +210,7 @@ export default function Page() {
                 </IconsList>
                 <ProjectCardLinks>
                   <ProjectCardLink
-                    href="https://github.com/aBgAmeuR/Booktopia"
+                    href="https://github.com/Ayush-Baliyan-19/Tic-Tac-Toe"
                     variant="secondary"
                   >
                     GitHub
