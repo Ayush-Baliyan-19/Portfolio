@@ -43,7 +43,7 @@ export default function Page() {
         <SectionAProposTitle>About</SectionAProposTitle>
         <SectionAProposText animDirection="left">
           I have been passionate about web development for several years.
-          Currently in my 2nd year of a Bachelor of Technology in Computer
+          Currently in my 3rd year of a Bachelor of Technology in Computer
           Science in USICT, I fully immerse myself in every project, focusing on
           clean code and effective solutions.
         </SectionAProposText>
