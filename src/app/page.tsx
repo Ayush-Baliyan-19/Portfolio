@@ -36,7 +36,7 @@ export default function Page() {
       <Header themeToggle>
         <HeaderHeading>Ayush Baliyan</HeaderHeading>
         <HeaderDescription>
-          Full stack developer based in Delhi, India.
+          Software developer based in Delhi, India.
         </HeaderDescription>
       </Header>
       <SectionAPropos>
