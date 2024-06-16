@@ -1,12 +1,12 @@
-import { PropsWithChildren } from 'react';
+import { PropsWithChildren } from "react";
 
-import { Icons } from '../icons';
+import { Icons } from "../icons";
 
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from '@/components/ui/tooltip';
+} from "@/components/ui/tooltip";
 
 export const IconsList = ({ children }: PropsWithChildren) => {
   return <div className="flex gap-1">{children}</div>;

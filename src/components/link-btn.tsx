@@ -1,10 +1,10 @@
-import { PropsWithChildren } from 'react';
-import { ExternalLink } from 'lucide-react';
+import { PropsWithChildren } from "react";
+import { ExternalLink } from "lucide-react";
 
-import { MotionA } from './framer-motion';
-import { Icons } from './icons';
+import { MotionA } from "./framer-motion";
+import { Icons } from "./icons";
 
-import { siteConfig } from '@/lib/constant';
+import { siteConfig } from "@/lib/constant";
 
 type TLinkBtnProps = PropsWithChildren<{
   icon: keyof typeof Icons;
@@ -27,8 +27,8 @@ export const LinkBtn = ({
       initial={{ opacity: 0, y: -25 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{
-        type: 'tween',
-        ease: 'easeOut',
+        type: "tween",
+        ease: "easeOut",
         duration: siteConfig.animationDuration,
         delay: animDelay,
       }}

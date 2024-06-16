@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 export const MotionHeader = motion.header;
 export const MotionH3 = motion.h3;

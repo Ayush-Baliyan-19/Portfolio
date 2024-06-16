@@ -1,8 +1,8 @@
-import { PropsWithChildren } from 'react';
+import { PropsWithChildren } from "react";
 
-import { MotionDiv } from './framer-motion';
+import { MotionDiv } from "./framer-motion";
 
-import { siteConfig } from '@/lib/constant';
+import { siteConfig } from "@/lib/constant";
 
 export const SectionProjects = ({ children }: PropsWithChildren) => {
   return (
@@ -18,8 +18,8 @@ export const SectionProjectsHeader = ({ children }: PropsWithChildren) => {
       initial={{ opacity: 0, y: -15 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{
-        type: 'tween',
-        ease: 'easeOut',
+        type: "tween",
+        ease: "easeOut",
         duration: siteConfig.animationDuration,
       }}
     >

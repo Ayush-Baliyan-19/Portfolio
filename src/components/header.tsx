@@ -1,11 +1,11 @@
-import { PropsWithChildren } from 'react';
+import { PropsWithChildren } from "react";
 
-import { MotionHeader } from './framer-motion';
-import { Icons } from './icons';
-import { ThemeToggle } from './theme-toggle';
+import { MotionHeader } from "./framer-motion";
+import { Icons } from "./icons";
+import { ThemeToggle } from "./theme-toggle";
 
-import { siteConfig } from '@/lib/constant';
-import { cn } from '@/lib/utils';
+import { siteConfig } from "@/lib/constant";
+import { cn } from "@/lib/utils";
 
 type THeaderProps = PropsWithChildren<{
   themeToggle?: boolean;
@@ -16,7 +16,7 @@ export const Header = ({ themeToggle = false, children }: THeaderProps) => {
     <MotionHeader
       initial={{ y: -25, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: siteConfig.animationDuration, ease: 'easeOut' }}
+      transition={{ duration: siteConfig.animationDuration, ease: "easeOut" }}
       className="container mb-8 flex items-center justify-between"
     >
       {/* <Icons.logo className="size-16 overflow-visible rounded-full border p-2 text-neutral-500 dark:text-neutral-400" /> */}
@@ -37,8 +37,8 @@ export const HeaderHeading = ({
   return (
     <h1
       className={cn(
-        'flex font-mono text-2xl font-semibold leading-6 tracking-tight text-neutral-900 dark:text-neutral-100',
-        className
+        "flex font-mono text-2xl font-semibold leading-6 tracking-tight text-neutral-900 dark:text-neutral-100",
+        className,
       )}
       {...props}
     />
@@ -52,8 +52,8 @@ export const HeaderDescription = ({
   return (
     <p
       className={cn(
-        'text-sm font-medium text-neutral-500 dark:text-neutral-400',
-        className
+        "text-sm font-medium text-neutral-500 dark:text-neutral-400",
+        className,
       )}
       {...props}
     />

@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 
-import { cn } from '@/lib/utils';
+import { cn } from "@/lib/utils";
 
 export const WobbleCard = ({
   children,
@@ -33,12 +33,12 @@ export const WobbleCard = ({
       style={{
         transform: isHovering
           ? `translate3d(${mousePosition.x}px, ${mousePosition.y}px, 0) scale3d(1, 1, 1)`
-          : 'translate3d(0px, 0px, 0) scale3d(1, 1, 1)',
-        transition: 'transform 0.1s ease-out',
+          : "translate3d(0px, 0px, 0) scale3d(1, 1, 1)",
+        transition: "transform 0.1s ease-out",
       }}
       className={cn(
-        'relative mx-auto size-full overflow-hidden',
-        containerClassName
+        "relative mx-auto size-full overflow-hidden",
+        containerClassName,
       )}
     >
       {children}

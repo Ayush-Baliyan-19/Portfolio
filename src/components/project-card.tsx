@@ -1,14 +1,14 @@
 /* eslint-disable jsx-a11y/alt-text */
-import React, { PropsWithChildren } from 'react';
-import Image, { ImageProps } from 'next/image';
-import Link, { LinkProps } from 'next/link';
+import React, { PropsWithChildren } from "react";
+import Image, { ImageProps } from "next/image";
+import Link, { LinkProps } from "next/link";
 
-import { MotionArticle } from './framer-motion';
-import { buttonVariants } from './ui/button';
-import { WobbleCard } from './ui/wobble-card';
+import { MotionArticle } from "./framer-motion";
+import { buttonVariants } from "./ui/button";
+import { WobbleCard } from "./ui/wobble-card";
 
-import { siteConfig } from '@/lib/constant';
-import { cn } from '@/lib/utils';
+import { siteConfig } from "@/lib/constant";
+import { cn } from "@/lib/utils";
 
 type TProjectCardProps = PropsWithChildren<{
   animDelay?: number;
@@ -20,9 +20,9 @@ export const ProjectCard = ({ animDelay, children }: TProjectCardProps) => {
       initial={{ opacity: 0, scale: 0.9 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{
-        type: 'just',
+        type: "just",
         duration: siteConfig.animationDuration,
-        ease: 'easeOut',
+        ease: "easeOut",
         delay: animDelay,
       }}
       className=""
@@ -76,18 +76,18 @@ export const ProjectCardLinks = ({ children }: PropsWithChildren) => {
 
 type TProjectCardLinkProps = LinkProps &
   PropsWithChildren & {
-    variant?: 'primary' | 'secondary';
+    variant?: "primary" | "secondary";
   };
 
 export const ProjectCardLink = (props: TProjectCardLinkProps) => {
   return (
     <Link {...props}>
-      {props.variant === 'secondary' ? (
+      {props.variant === "secondary" ? (
         <p className="flex cursor-pointer items-center text-sm text-neutral-400 underline transition-colors duration-100 ease-in-out hover:text-neutral-500 dark:text-neutral-200 dark:hover:text-neutral-300">
           {props.children}
         </p>
       ) : (
-        <p className={cn(buttonVariants({ size: 'xs' }), 'flex items-center')}>
+        <p className={cn(buttonVariants({ size: "xs" }), "flex items-center")}>
           {props.children}
         </p>
       )}

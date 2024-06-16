@@ -1,6 +1,6 @@
-import { PropsWithChildren } from 'react';
+import { PropsWithChildren } from "react";
 
-import { Icons } from '@/components/icons';
+import { Icons } from "@/components/icons";
 
 type TStacktBadgeProps = PropsWithChildren<{
   icon: keyof typeof Icons;

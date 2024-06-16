@@ -1,8 +1,8 @@
-import React, { PropsWithChildren } from 'react';
+import React, { PropsWithChildren } from "react";
 
-import { MotionH3, MotionP } from './framer-motion';
+import { MotionH3, MotionP } from "./framer-motion";
 
-import { siteConfig } from '@/lib/constant';
+import { siteConfig } from "@/lib/constant";
 
 export const SectionAPropos = ({ children }: PropsWithChildren) => {
   return (
@@ -16,9 +16,9 @@ export const SectionAProposTitle = ({ children }: PropsWithChildren) => {
       initial={{ opacity: 0, scale: 0.9 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{
-        type: 'just',
+        type: "just",
         duration: siteConfig.animationDuration,
-        ease: 'easeOut',
+        ease: "easeOut",
       }}
       className="font-mono font-semibold text-neutral-800 dark:text-neutral-200"
     >
@@ -28,7 +28,7 @@ export const SectionAProposTitle = ({ children }: PropsWithChildren) => {
 };
 
 type TSectionAProposTextProps = PropsWithChildren<{
-  animDirection?: 'left' | 'right';
+  animDirection?: "left" | "right";
 }>;
 
 export const SectionAProposText = ({
@@ -37,12 +37,12 @@ export const SectionAProposText = ({
 }: TSectionAProposTextProps) => {
   return (
     <MotionP
-      initial={{ opacity: 0, x: animDirection === 'left' ? -10 : 10 }}
+      initial={{ opacity: 0, x: animDirection === "left" ? -10 : 10 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{
-        type: 'just',
+        type: "just",
         duration: siteConfig.animationDuration,
-        ease: 'easeOut',
+        ease: "easeOut",
       }}
       className="leading-7 text-neutral-500 dark:text-neutral-400"
     >

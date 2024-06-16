@@ -1,8 +1,8 @@
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink } from "lucide-react";
 
-import { Footer } from '@/components/footer';
-import { Header, HeaderDescription, HeaderHeading } from '@/components/header';
-import { LinkBtn } from '@/components/link-btn';
+import { Footer } from "@/components/footer";
+import { Header, HeaderDescription, HeaderHeading } from "@/components/header";
+import { LinkBtn } from "@/components/link-btn";
 import {
   ProjectCard,
   ProjectCardContent,
@@ -13,22 +13,22 @@ import {
   ProjectCardLinks,
   ProjectCardTextContent,
   ProjectCardTitle,
-} from '@/components/project-card';
+} from "@/components/project-card";
 import {
   SectionAPropos,
   SectionAProposLinks,
   SectionAProposText,
   SectionAProposTitle,
-} from '@/components/section-apropos';
+} from "@/components/section-apropos";
 import {
   SectionProjects,
   SectionProjectsContent,
   SectionProjectsDescription,
   SectionProjectsHeader,
   SectionProjectsTitle,
-} from '@/components/section-projects';
-import { IconItem, IconsList } from '@/components/ui/icons-list';
-import { StackBadge as SB } from '@/components/ui/stack-badge';
+} from "@/components/section-projects";
+import { IconItem, IconsList } from "@/components/ui/icons-list";
+import { StackBadge as SB } from "@/components/ui/stack-badge";
 
 export default function Page() {
   return (
@@ -49,18 +49,18 @@ export default function Page() {
         </SectionAProposText>
         <SectionAProposText animDirection="right">
           I develop my software development skills using
-          <SB icon="typescript">TypeScript</SB> and{' '}
-          <SB icon="javascript">JavaScript</SB> technologies such as{' '}
+          <SB icon="typescript">TypeScript</SB> and{" "}
+          <SB icon="javascript">JavaScript</SB> technologies such as{" "}
           <SB icon="nextjs">Next.js</SB> and <SB icon="react">React.js</SB>,
-          well as front-end tools like <SB icon="tailwindcss">Tailwind</SB> and{' '}
+          well as front-end tools like <SB icon="tailwindcss">Tailwind</SB> and{" "}
           <SB icon="shadcnUI">ShadCN</SB>. For the back-end, I specialize in
-          <SB icon="nodejs">NodeJS</SB>, <SB icon="express">ExpressJS</SB>, and{' '}
-          <SB icon="firebase">Firebase</SB>. I also use <SB icon="git">Git</SB>{' '}
+          <SB icon="nodejs">NodeJS</SB>, <SB icon="express">ExpressJS</SB>, and{" "}
+          <SB icon="firebase">Firebase</SB>. I also use <SB icon="git">Git</SB>{" "}
           and <SB icon="sql">SQL</SB>,<SB icon="postgres">Postgres</SB> for
           version control and database. For the deployment and hosting of my
-          projects, I use <SB icon="vercel">Vercel</SB> and{' '}
+          projects, I use <SB icon="vercel">Vercel</SB> and{" "}
           <SB icon="aws">AWS</SB> along with a with a touch of devops with the
-          help of <SB icon="docker">Docker</SB> and{' '}
+          help of <SB icon="docker">Docker</SB> and{" "}
           <SB icon="kubernetes">Kubernetes</SB>.
         </SectionAProposText>
         <SectionAProposLinks>
