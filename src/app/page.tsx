@@ -1,5 +1,6 @@
 import { ExternalLink } from "lucide-react";
 
+import ExpCard from "@/components/experience-card";
 import { Footer } from "@/components/footer";
 import { Header, HeaderDescription, HeaderHeading } from "@/components/header";
 import { LinkBtn } from "@/components/link-btn";
@@ -21,6 +22,13 @@ import {
   SectionAProposTitle,
 } from "@/components/section-apropos";
 import {
+  SectionExperience,
+  SectionExperienceContent,
+  SectionExperienceDescription,
+  SectionExperienceHeader,
+  SectionExperienceTitle,
+} from "@/components/section-experience";
+import {
   SectionProjects,
   SectionProjectsContent,
   SectionProjectsDescription,
@@ -29,6 +37,7 @@ import {
 } from "@/components/section-projects";
 import { IconItem, IconsList } from "@/components/ui/icons-list";
 import { StackBadge as SB } from "@/components/ui/stack-badge";
+import { experience } from "@/lib/constant";
 
 export default function Page() {
   return (
@@ -117,7 +126,7 @@ export default function Page() {
               </ProjectCardTextContent>
               <ProjectCardFooter>
                 <IconsList>
-                  <IconItem icon="react" />
+                  <IconItem icon="nextjs" />
                   <IconItem icon="javascript" />
                   <IconItem icon="nodejs" />
                   <IconItem icon="mongodb" />
@@ -270,6 +279,202 @@ export default function Page() {
           </ProjectCard> */}
         </SectionProjectsContent>
       </SectionProjects>
+
+      <SectionExperience>
+        <SectionExperienceHeader>
+          <SectionExperienceTitle>Experience</SectionExperienceTitle>
+          <SectionExperienceDescription>
+            What experience I&apos;ve gained over the years
+          </SectionExperienceDescription>
+        </SectionExperienceHeader>
+        <SectionExperienceContent>
+          {!experience
+            ? "Loading"
+            : experience.map((exp, index) => {
+                return (
+                  <div key={index}>
+                    <ExpCard
+                      img={exp.Image}
+                      companyName={exp.Company}
+                      role={exp.Role}
+                      description={exp.Description}
+                      timePeriod={exp.Time}
+                      tech={exp.Tech}
+                    />
+                  </div>
+                );
+              })}
+          {/* <ProjectCard animDelay={0.1}>
+            <ProjectCardImage
+              src="/images/Timeless.webp"
+              width="640"
+              height="360"
+              alt="Project image"
+            />
+            <ProjectCardContent>
+              <ProjectCardTextContent>
+                <ProjectCardTitle>TimeLess</ProjectCardTitle>
+                <ProjectCardDescription>
+                  Implemented a time scheduling system with notes and integrated
+                  a streamlined timetable and attendance management system for
+                  educators.
+                </ProjectCardDescription>
+              </ProjectCardTextContent>
+              <ProjectCardFooter>
+                <IconsList>
+                  <IconItem icon="react" />
+                  <IconItem icon="javascript" />
+                  <IconItem icon="nodejs" />
+                  <IconItem icon="mongodb" />
+                  <IconItem icon="express" />
+                  <IconItem icon="scss" />
+                </IconsList>
+                <ProjectCardLinks>
+                  <ProjectCardLink
+                    href="https://timeless-drab.vercel.app/"
+                    variant="primary"
+                  >
+                    Try it out
+                    <ExternalLink className="ml-1 size-3" />
+                  </ProjectCardLink>
+                  <ProjectCardLink
+                    href="https://github.com/Ayush-Baliyan-19/TimeLess"
+                    variant="secondary"
+                  >
+                    GitHub
+                    <ExternalLink className="ml-1 size-3" />
+                  </ProjectCardLink>
+                </ProjectCardLinks>
+              </ProjectCardFooter>
+            </ProjectCardContent>
+          </ProjectCard>
+          <ProjectCard animDelay={0.2}>
+            <ProjectCardImage
+              src="/images/SilentSpeak.webp"
+              width="1920"
+              height="993"
+              alt="Project image"
+            />
+            <ProjectCardContent>
+              <ProjectCardTextContent>
+                <ProjectCardTitle>SilentSpeak</ProjectCardTitle>
+                <ProjectCardDescription>
+                  A video conferencing application in which I integrated
+                  advanced hand sign recognition technology for non-verbal
+                  communicators and added live captions feature to enhance
+                  accessibility during video conferences.
+                </ProjectCardDescription>
+              </ProjectCardTextContent>
+              <ProjectCardFooter>
+                <IconsList>
+                  <IconItem icon="nextjs" />
+                  <IconItem icon="tensorflow" />
+                  <IconItem icon="tailwindcss" />
+                  <IconItem icon="shadcnUI" />
+                  <IconItem icon="SocketIo" />
+                </IconsList>
+                <ProjectCardLinks>
+                  <ProjectCardLink
+                    href="https://meet-for-mute.vercel.app/"
+                    variant="primary"
+                  >
+                    Try it out
+                    <ExternalLink className="ml-1 size-3" />
+                  </ProjectCardLink>
+                  <ProjectCardLink
+                    href="https://github.com/Ayush-Baliyan-19/MeetForMute"
+                    variant="secondary"
+                  >
+                    GitHub
+                    <ExternalLink className="ml-1 size-3" />
+                  </ProjectCardLink>
+                </ProjectCardLinks>
+              </ProjectCardFooter>
+            </ProjectCardContent>
+          </ProjectCard>
+          <ProjectCard animDelay={0.3}>
+            <ProjectCardImage
+              src="/images/GridGladiators.webp"
+              width="1920"
+              height="993"
+              alt="Project image"
+            />
+            <ProjectCardContent>
+              <ProjectCardTextContent>
+                <ProjectCardTitle>GridGladiators</ProjectCardTitle>
+                <ProjectCardDescription>
+                  GridGladiators is a modern take on classic tic-tac-toe,
+                  offering customizable grid sizes for deeper strategy. Engage
+                  in competitive matches with real-time multiplayer, utilize
+                  strategic power-ups like &apos;Clear Cell&apos;, and track
+                  scores scores dynamically. Enjoy cross-platform play, vibrant
+                  interactions, and immersive visual and audio feedback for an
+                  exciting gaming experience.
+                </ProjectCardDescription>
+              </ProjectCardTextContent>
+              <ProjectCardFooter>
+                <IconsList>
+                  <IconItem icon="nextjs" />
+                  <IconItem icon="tailwindcss" />
+                  <IconItem icon="shadcnUI" />
+                  <IconItem icon="SocketIo" />
+                  <IconItem icon="fastApi" />
+                </IconsList>
+                <ProjectCardLinks>
+                  <ProjectCardLink
+                    href="https://github.com/Ayush-Baliyan-19/Tic-Tac-Toe"
+                    variant="secondary"
+                  >
+                    GitHub
+                    <ExternalLink className="ml-1 size-3" />
+                  </ProjectCardLink>
+                </ProjectCardLinks>
+              </ProjectCardFooter>
+            </ProjectCardContent>
+          </ProjectCard> */}
+          {/* <ProjectCard animDelay={0.4}>
+            <ProjectCardImage
+              src="/images/progiso-min.webp"
+              width="1920"
+              height="993"
+              alt="Project image"
+            />
+            <ProjectCardContent>
+              <ProjectCardTextContent>
+                <ProjectCardTitle>Progiso</ProjectCardTitle>
+                <ProjectCardDescription>
+                  Plateforme de gestion de projet conçue pour simplifier la
+                  gestion des projets des petites et moyennes équipes.
+                </ProjectCardDescription>
+              </ProjectCardTextContent>
+              <ProjectCardFooter>
+                <IconsList>
+                  <IconItem icon="nextjs" />
+                  <IconItem icon="typescript" />
+                  <IconItem icon="shadcnUI" />
+                  <IconItem icon="tailwindcss" />
+                </IconsList>
+                <ProjectCardLinks>
+                  <ProjectCardLink
+                    href="https://progiso.vercel.app/"
+                    variant="primary"
+                  >
+                    Tester
+                    <ExternalLink className="ml-1 size-3" />
+                  </ProjectCardLink>
+                  <ProjectCardLink
+                    href="https://github.com/aBgAmeuR/Progiso"
+                    variant="secondary"
+                  >
+                    GitHub
+                    <ExternalLink className="ml-1 size-3" />
+                  </ProjectCardLink>
+                </ProjectCardLinks>
+              </ProjectCardFooter>
+            </ProjectCardContent>
+          </ProjectCard> */}
+        </SectionExperienceContent>
+      </SectionExperience>
       <Footer />
     </>
   );
