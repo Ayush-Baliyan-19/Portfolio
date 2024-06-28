@@ -101,7 +101,7 @@ export const experience: experienceInterface[] = [
       "Leading The Campus Ambassador Program":
         "Led a team of 10+ campus ambassadors to promote the event in their respective colleges, resulting in a 30% increase in event participation.",
     },
-    Time: ["Jul '22", "September '22"],
+    Time: ["July '22", "September '22"],
     Tech: ["react", "javascript", "tailwindcss", "vercel", "figma"],
   },
 ];

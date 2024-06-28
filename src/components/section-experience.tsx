@@ -47,5 +47,5 @@ export const SectionExperienceDescription = ({
 };
 
 export const SectionExperienceContent = ({ children }: PropsWithChildren) => {
-  return <div className="bg my-2 rounded-xl border-l-8">{children}</div>;
+  return <div className="bg my-2 border-l-8">{children}</div>;
 };
