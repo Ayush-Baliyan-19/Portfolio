@@ -42,7 +42,7 @@ const ExpCard: React.FC<ModalInterface> = ({
         >
           <div className="my-2 flex justify-between">
             <div className="flex w-7/12 flex-col">
-              <div className="flex gap-3">
+              <div className="flex flex-wrap gap-3">
                 <h1 className="text-lg font-[700]">{companyName}</h1>
                 <IconsList>
                   {tech.length > 0 &&
