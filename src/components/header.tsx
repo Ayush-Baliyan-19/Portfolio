@@ -1,8 +1,10 @@
+"use client";
 import { PropsWithChildren } from "react";
 
 import { MotionHeader } from "./framer-motion";
 import { Icons } from "./icons";
 import { ThemeToggle } from "./theme-toggle";
+import { Button } from "./ui/button";
 
 import { siteConfig } from "@/lib/constant";
 import { cn } from "@/lib/utils";
@@ -25,7 +27,20 @@ export const Header = ({ themeToggle = false, children }: THeaderProps) => {
 
         <div className="flex flex-col">{children}</div>
       </div>
-      {themeToggle ? <ThemeToggle /> : null}
+      <div className="flex items-center justify-center">
+        <Button
+          variant="ghost"
+          size="sm"
+          onClick={() => {
+            window.open("/Resume.pdf", "_blank");
+          }}
+          className="flex items-center justify-center gap-2 rounded p-2 text-neutral-800 dark:text-neutral-400"
+        >
+          <Icons.resume className=" text-neutral-500 dark:text-neutral-400" />
+          Resume
+        </Button>
+        {themeToggle ? <ThemeToggle /> : null}
+      </div>
     </MotionHeader>
   );
 };
