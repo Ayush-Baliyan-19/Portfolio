@@ -1,7 +1,9 @@
 import {
   AmazonwebservicesOriginalWordmark,
   AngularOriginal,
+  BootstrapOriginal,
   Css3Plain,
+  DjangoPlain,
   DockerOriginal,
   ExpressOriginal,
   FastapiOriginal,
@@ -12,13 +14,16 @@ import {
   JestPlain,
   KubernetesOriginal,
   LinkedinOriginal,
+  MaterialuiOriginal,
   MongodbPlain,
   MysqlOriginal,
   NodejsOriginal,
+  OpencvOriginal,
   PostgresqlOriginal,
   PrismaOriginal,
   ReactOriginal,
   TensorflowOriginal,
+  ThreejsOriginal,
   VercelOriginal,
 } from "devicons-react";
 import { LucideProps } from "lucide-react";
@@ -95,6 +100,11 @@ export const Icons = {
   tensorflow: TensorflowOriginal,
   fastApi: FastapiOriginal,
   angular: AngularOriginal,
+  django: DjangoPlain,
+  opencv: OpencvOriginal,
+  materialui: MaterialuiOriginal,
+  bootstrap: BootstrapOriginal,
+  threejs: ThreejsOriginal,
   resume: (props: LucideProps) => (
     <svg
       width="24"

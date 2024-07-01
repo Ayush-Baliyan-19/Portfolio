@@ -44,7 +44,7 @@ export const SectionAProposText = ({
         duration: siteConfig.animationDuration,
         ease: "easeOut",
       }}
-      className="leading-7 text-neutral-500 dark:text-neutral-400"
+      className="flex flex-col gap-3 leading-7 text-neutral-500 dark:text-neutral-400"
     >
       {children}
     </MotionP>

@@ -7,25 +7,23 @@ import { siteConfig } from "@/lib/constant";
 export const SectionExperience = ({ children }: PropsWithChildren) => {
   return (
     <section className="container mt-12 flex w-full max-w-3xl flex-col gap-4 p-6 md:rounded-2xl">
-      {children}
+      <MotionDiv
+        initial={{ opacity: 0, y: -15 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          type: "tween",
+          ease: "easeOut",
+          duration: siteConfig.animationDuration,
+        }}
+      >
+        {children}
+      </MotionDiv>
     </section>
   );
 };
 
 export const SectionExperienceHeader = ({ children }: PropsWithChildren) => {
-  return (
-    <MotionDiv
-      initial={{ opacity: 0, y: -15 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{
-        type: "tween",
-        ease: "easeOut",
-        duration: siteConfig.animationDuration,
-      }}
-    >
-      {children}
-    </MotionDiv>
-  );
+  return <>{children}</>;
 };
 
 export const SectionExperienceTitle = ({ children }: PropsWithChildren) => {
@@ -47,5 +45,19 @@ export const SectionExperienceDescription = ({
 };
 
 export const SectionExperienceContent = ({ children }: PropsWithChildren) => {
-  return <div className="bg my-2 border-l-8">{children}</div>;
+  return (
+    <div className="bg my-2 border-l-8">
+      <MotionDiv
+        initial={{ opacity: 0, y: -15 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          type: "tween",
+          ease: "easeOut",
+          duration: siteConfig.animationDuration,
+        }}
+      >
+        {children}
+      </MotionDiv>
+    </div>
+  );
 };
