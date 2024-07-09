@@ -63,8 +63,8 @@ export default function Page() {
         </SectionAProposTitle>
         <SectionAProposText animDirection="left">
           <span className="flex items-start justify-center gap-3">
-            <span className="w-1/3">Frontend:</span>
-            <span className=" justify-left flex w-2/3 flex-wrap items-center gap-3">
+            <span className="w-1/3 lg:w-1/4">Frontend:</span>
+            <span className=" justify-left flex w-2/3 flex-wrap items-center gap-3 lg:w-3/4">
               <SB icon="nextjs">Next.js</SB> <SB icon="react">React.js</SB>{" "}
               <SB icon="angular">Angular</SB>{" "}
               <SB icon="tailwindcss">Tailwind</SB>{" "}
@@ -73,50 +73,50 @@ export default function Page() {
             </span>
           </span>
           <span className="flex items-start justify-center gap-3">
-            <span className="w-1/3">Backend:</span>
-            <span className=" justify-left flex w-2/3 flex-wrap items-center gap-3">
+            <span className="w-1/3 lg:w-1/4">Backend:</span>
+            <span className=" justify-left flex w-2/3 flex-wrap items-center gap-3 lg:w-3/4">
               <SB icon="nodejs">NodeJS</SB> <SB icon="express">ExpressJS</SB>{" "}
               <SB icon="firebase">Firebase</SB> <SB icon="django">Django</SB>{" "}
               <SB icon="fastApi">FastAPI</SB>
               <br />
             </span>
           </span>
-
           <span className="flex items-start justify-center gap-3">
-            <span className="w-1/3">Database:</span>
-            <span className="justify-left flex w-2/3 flex-wrap items-center gap-3">
+            <span className="w-1/3 lg:w-1/4">Database:</span>
+            <span className="justify-left flex w-2/3 flex-wrap items-center gap-3 lg:w-3/4">
               <SB icon="sql">SQL</SB> <SB icon="postgres">Postgres</SB>{" "}
               <SB icon="mongodb">MongoDB</SB> <br />
             </span>
           </span>
           <span className="flex items-start justify-center gap-3">
-            <span className="w-1/3">Version Control:</span>
-            <span className="justify-left flex w-2/3 flex-wrap items-center gap-3">
+            <span className="w-1/3 lg:w-1/4">Version Control:</span>
+            <span className="justify-left flex w-2/3 flex-wrap items-center gap-3 lg:w-3/4">
               <SB icon="git">Git</SB> <SB icon="github">GitHub</SB> <br />
             </span>
           </span>
           <span className="flex items-start justify-center gap-3">
-            <span className="w-1/3">Deployment:</span>
-            <span className="justify-left flex w-2/3 flex-wrap items-center gap-3">
+            <span className="w-1/3 lg:w-1/4">Deployment:</span>
+            <span className="justify-left flex w-2/3 flex-wrap items-center gap-3 lg:w-3/4">
               <SB icon="vercel">Vercel</SB> <SB icon="aws">AWS</SB> <br />
             </span>
           </span>
           <span className="flex items-start justify-center gap-3">
-            <span className="w-1/3">DevOps:</span>
-            <span className="justify-left flex w-2/3 flex-wrap items-center gap-3">
+            <span className="w-1/3 lg:w-1/4">DevOps:</span>
+            <span className="justify-left flex w-2/3 flex-wrap items-center gap-3 lg:w-3/4">
               <SB icon="docker">Docker</SB>{" "}
               <SB icon="kubernetes">Kubernetes</SB>
             </span>
           </span>
           <span className="flex items-start justify-center gap-3">
-            <span className="w-1/3">Other:</span>
-            <span className="justify-left flex w-2/3 flex-wrap items-center gap-3">
+            <span className="w-1/3 lg:w-1/4">Other:</span>
+            <span className="justify-left flex w-2/3 flex-wrap items-center gap-3 lg:w-3/4">
               <SB icon="tensorflow">TensorFlow</SB>{" "}
               <SB icon="SocketIo">Socket.IO</SB> <SB icon="opencv">OpenCV</SB>{" "}
               <SB icon="threejs">ThreeJs</SB>{" "}
             </span>
           </span>
         </SectionAProposText>
+        <SectionAProposTitle>Connect With Me</SectionAProposTitle>
         {/* <SectionAProposText animDirection="right">
           I develop my software development skills using
           <SB icon="typescript">TypeScript</SB> and{" "}
@@ -149,6 +149,13 @@ export default function Page() {
             animDelay={0.2}
           >
             @ayush-baliyan
+          </LinkBtn>
+          <LinkBtn
+            icon="gmail"
+            label="Mail"
+            link="mailto:ayushbaliyan05@gmail.com"
+          >
+            @ayushbaliyan05
           </LinkBtn>
           {/* <LinkBtn
             icon=""
