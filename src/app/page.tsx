@@ -53,10 +53,23 @@ export default function Page() {
       <SectionAPropos>
         <SectionAProposTitle>About</SectionAProposTitle>
         <SectionAProposText animDirection="left">
-          I have been passionate about web development for several years.
-          Currently in my 3rd year of a Bachelor of Technology in Computer
-          Science in USICT, I fully immerse myself in every project, focusing on
-          clean code and effective solutions.
+          As a final-year student and passionate full stack developer, I thrive
+          on exploring different web technologies and bringing innovative
+          projects to life. Currently, I{`'`}m honing my skills in data
+          structures and algorithms, aiming to integrate them seamlessly into my
+          development work.
+          <br />
+          <br />
+          In my spare time, you{`'`}ll often find me immersed in gaming,
+          shooting hoops on the basketball court, or indulging in good food. I
+          also love listening to music while working on projects, finding that
+          it fuels my creativity and focus.
+          <br />
+          <br />
+          In addition to my studies and personal projects, I am working as a
+          freelancer, actively seeking new opportunities and orders. If you have
+          a project in mind or need assistance with development, feel free to
+          reach out. Let{`'`}s create something amazing together!
         </SectionAProposText>
         <SectionAProposTitle>
           Technologies I{`'`}ve worked on
@@ -304,47 +317,48 @@ export default function Page() {
               </ProjectCardFooter>
             </ProjectCardContent>
           </ProjectCard>
-          {/* <ProjectCard animDelay={0.4}>
+          <ProjectCard animDelay={0.4}>
             <ProjectCardImage
-              src="/images/progiso-min.webp"
+              src="/images/TempleHub.webp"
               width="1920"
               height="993"
               alt="Project image"
             />
             <ProjectCardContent>
               <ProjectCardTextContent>
-                <ProjectCardTitle>Progiso</ProjectCardTitle>
+                <ProjectCardTitle>TempleHub</ProjectCardTitle>
                 <ProjectCardDescription>
-                  Plateforme de gestion de projet conçue pour simplifier la
-                  gestion des projets des petites et moyennes équipes.
+                  Designed a scalable global platform for a home temple
+                  business, boosting user engagement and online sales by 40%,
+                  and engineered a high-performance backend handling 10,000
+                  daily requests, streamlining user management, enhancing
+                  personalized shopping, and integrating secure payment
+                  gateways, leading to a 25% increase in completed purchases.
                 </ProjectCardDescription>
               </ProjectCardTextContent>
               <ProjectCardFooter>
                 <IconsList>
                   <IconItem icon="nextjs" />
+                  <IconItem icon="mongodb" />
+                  <IconItem icon="express" />
                   <IconItem icon="typescript" />
-                  <IconItem icon="shadcnUI" />
                   <IconItem icon="tailwindcss" />
+                  <IconItem icon="firebase" />
+                  <IconItem icon="aws" />
+                  <IconItem icon="vercel" />
                 </IconsList>
                 <ProjectCardLinks>
                   <ProjectCardLink
-                    href="https://progiso.vercel.app/"
+                    href="https://www.templehub.store/"
                     variant="primary"
                   >
-                    Tester
-                    <ExternalLink className="ml-1 size-3" />
-                  </ProjectCardLink>
-                  <ProjectCardLink
-                    href="https://github.com/aBgAmeuR/Progiso"
-                    variant="secondary"
-                  >
-                    GitHub
+                    Visit Website
                     <ExternalLink className="ml-1 size-3" />
                   </ProjectCardLink>
                 </ProjectCardLinks>
               </ProjectCardFooter>
             </ProjectCardContent>
-          </ProjectCard> */}
+          </ProjectCard>
         </SectionProjectsContent>
         <div className="flex w-full items-center justify-center">
           <Button className="w-min rounded-xl" asChild>
