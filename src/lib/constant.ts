@@ -48,15 +48,14 @@ export const experience: experienceInterface[] = [
     Image: "/images/Freelance.webp",
     Time: ["Present"],
     Tech: [
-      "react",
+      "nextjs",
       "nodejs",
       "mongodb",
       "express",
       "tailwindcss",
       "aws",
       "vercel",
-      "php",
-      "angular",
+      "firebase",
     ],
   },
   {
