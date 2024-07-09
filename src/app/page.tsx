@@ -62,38 +62,59 @@ export default function Page() {
           Technologies I{`'`}ve worked on
         </SectionAProposTitle>
         <SectionAProposText animDirection="left">
-          <span className="justify-left flex items-center gap-3">
-            Frontend: <SB icon="nextjs">Next.js</SB>{" "}
-            <SB icon="react">React.js</SB> <SB icon="angular">Angular</SB>{" "}
-            <SB icon="tailwindcss">Tailwind</SB> <SB icon="shadcnUI">ShadCN</SB>{" "}
-            <SB icon="materialui">MUI</SB> <SB icon="bootstrap">Bootstrap</SB>{" "}
-            <br />
+          <span className="flex items-start justify-center gap-3">
+            <span className="w-1/3">Frontend:</span>
+            <span className=" justify-left flex w-2/3 flex-wrap items-center gap-3">
+              <SB icon="nextjs">Next.js</SB> <SB icon="react">React.js</SB>{" "}
+              <SB icon="angular">Angular</SB>{" "}
+              <SB icon="tailwindcss">Tailwind</SB>{" "}
+              <SB icon="shadcnUI">ShadCN</SB> <SB icon="materialui">MUI</SB>{" "}
+              <SB icon="bootstrap">Bootstrap</SB>
+            </span>
           </span>
-          <span className="justify-left flex items-center gap-3">
-            Backend: <SB icon="nodejs">NodeJS</SB>{" "}
-            <SB icon="express">ExpressJS</SB> <SB icon="firebase">Firebase</SB>{" "}
-            <SB icon="django">Django</SB> <SB icon="fastApi">FastAPI</SB> <br />
+          <span className="flex items-start justify-center gap-3">
+            <span className="w-1/3">Backend:</span>
+            <span className=" justify-left flex w-2/3 flex-wrap items-center gap-3">
+              <SB icon="nodejs">NodeJS</SB> <SB icon="express">ExpressJS</SB>{" "}
+              <SB icon="firebase">Firebase</SB> <SB icon="django">Django</SB>{" "}
+              <SB icon="fastApi">FastAPI</SB>
+              <br />
+            </span>
           </span>
-          <span className="justify-left flex items-center gap-3">
-            Database: <SB icon="sql">SQL</SB> <SB icon="postgres">Postgres</SB>{" "}
-            <SB icon="mongodb">MongoDB</SB> <br />
+
+          <span className="flex items-start justify-center gap-3">
+            <span className="w-1/3">Database:</span>
+            <span className="justify-left flex w-2/3 flex-wrap items-center gap-3">
+              <SB icon="sql">SQL</SB> <SB icon="postgres">Postgres</SB>{" "}
+              <SB icon="mongodb">MongoDB</SB> <br />
+            </span>
           </span>
-          <span className="justify-left flex items-center gap-3">
-            Version Control: <SB icon="git">Git</SB>{" "}
-            <SB icon="github">GitHub</SB> <br />
+          <span className="flex items-start justify-center gap-3">
+            <span className="w-1/3">Version Control:</span>
+            <span className="justify-left flex w-2/3 flex-wrap items-center gap-3">
+              <SB icon="git">Git</SB> <SB icon="github">GitHub</SB> <br />
+            </span>
           </span>
-          <span className="justify-left flex items-center gap-3">
-            Deployment: <SB icon="vercel">Vercel</SB> <SB icon="aws">AWS</SB>{" "}
-            <br />
+          <span className="flex items-start justify-center gap-3">
+            <span className="w-1/3">Deployment:</span>
+            <span className="justify-left flex w-2/3 flex-wrap items-center gap-3">
+              <SB icon="vercel">Vercel</SB> <SB icon="aws">AWS</SB> <br />
+            </span>
           </span>
-          <span className="justify-left flex items-center gap-3">
-            DevOps: <SB icon="docker">Docker</SB>{" "}
-            <SB icon="kubernetes">Kubernetes</SB>
+          <span className="flex items-start justify-center gap-3">
+            <span className="w-1/3">DevOps:</span>
+            <span className="justify-left flex w-2/3 flex-wrap items-center gap-3">
+              <SB icon="docker">Docker</SB>{" "}
+              <SB icon="kubernetes">Kubernetes</SB>
+            </span>
           </span>
-          <span className="justify-left flex items-center gap-3">
-            Other: <SB icon="tensorflow">TensorFlow</SB>{" "}
-            <SB icon="SocketIo">Socket.IO</SB> <SB icon="opencv">OpenCV</SB>{" "}
-            <SB icon="threejs">ThreeJs</SB>{" "}
+          <span className="flex items-start justify-center gap-3">
+            <span className="w-1/3">Other:</span>
+            <span className="justify-left flex w-2/3 flex-wrap items-center gap-3">
+              <SB icon="tensorflow">TensorFlow</SB>{" "}
+              <SB icon="SocketIo">Socket.IO</SB> <SB icon="opencv">OpenCV</SB>{" "}
+              <SB icon="threejs">ThreeJs</SB>{" "}
+            </span>
           </span>
         </SectionAProposText>
         {/* <SectionAProposText animDirection="right">
@@ -112,6 +133,32 @@ export default function Page() {
           help of <SB icon="docker">Docker</SB> and{" "}
           <SB icon="kubernetes">Kubernetes</SB>.
         </SectionAProposText> */}
+        <SectionAProposLinks>
+          <LinkBtn
+            icon="github"
+            label="GitHub"
+            link="https://github.com/Ayush-Baliyan-19"
+            animDelay={0.1}
+          >
+            @Ayush-Baliyan-19
+          </LinkBtn>
+          <LinkBtn
+            icon="linkedin"
+            label="LinkedIn"
+            link="https://linkedin.com/in/ayush-baliyan/"
+            animDelay={0.2}
+          >
+            @ayush-baliyan
+          </LinkBtn>
+          {/* <LinkBtn
+            icon=""
+            label="Website"
+            link="https://open.spotify.com/user/flps7duvtycn9yto85qwxpqtp"
+            animDelay={0.3}
+          >
+            Antoine
+          </LinkBtn> */}
+        </SectionAProposLinks>
       </SectionAPropos>
 
       <SectionProjects>
@@ -329,32 +376,6 @@ export default function Page() {
         </SectionExperienceContent>
       </SectionExperience>
 
-      <SectionAProposLinks>
-        <LinkBtn
-          icon="github"
-          label="GitHub"
-          link="https://github.com/Ayush-Baliyan-19"
-          animDelay={0.1}
-        >
-          @Ayush-Baliyan-19
-        </LinkBtn>
-        <LinkBtn
-          icon="linkedin"
-          label="LinkedIn"
-          link="https://linkedin.com/in/ayush-baliyan/"
-          animDelay={0.2}
-        >
-          @ayush-baliyan
-        </LinkBtn>
-        {/* <LinkBtn
-            icon=""
-            label="Website"
-            link="https://open.spotify.com/user/flps7duvtycn9yto85qwxpqtp"
-            animDelay={0.3}
-          >
-            Antoine
-          </LinkBtn> */}
-      </SectionAProposLinks>
       <Footer />
     </>
   );

@@ -45,7 +45,7 @@ const ExpCard: React.FC<ModalInterface> = ({
         alt="ll"
         className="size-14 rounded-full border-4 bg-[#f5f5f5] dark:bg-[#1e1e1f]"
       />
-      <div className="ml-3 flex w-10/12 flex-col rounded-xl bg-[#d8d8d8] px-2 py-4 lg:px-6 dark:bg-[#262627]">
+      <div className="ml-3 flex w-full flex-col rounded-xl bg-[#d8d8d8] px-2 py-4 lg:px-6 dark:bg-[#262627]">
         <div className="my-2 flex justify-between">
           <div className="flex w-7/12 flex-col">
             <div className="flex flex-wrap gap-3">

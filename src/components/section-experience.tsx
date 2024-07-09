@@ -6,7 +6,7 @@ import { siteConfig } from "@/lib/constant";
 
 export const SectionExperience = ({ children }: PropsWithChildren) => {
   return (
-    <section className="container mt-12 flex w-full max-w-3xl flex-col gap-4 p-6 md:rounded-2xl">
+    <section className="container mt-12 flex w-full max-w-3xl flex-col gap-4 p-6 pr-0 md:rounded-2xl">
       <MotionDiv
         initial={{ opacity: 0, y: -15 }}
         animate={{ opacity: 1, y: 0 }}

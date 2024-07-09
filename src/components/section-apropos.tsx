@@ -6,7 +6,9 @@ import { siteConfig } from "@/lib/constant";
 
 export const SectionAPropos = ({ children }: PropsWithChildren) => {
   return (
-    <section className="container flex flex-col gap-4">{children}</section>
+    <section className="container flex w-full max-w-3xl flex-col gap-4">
+      {children}
+    </section>
   );
 };
 

@@ -19,7 +19,7 @@ export const Header = ({ themeToggle = false, children }: THeaderProps) => {
       initial={{ y: -25, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: siteConfig.animationDuration, ease: "easeOut" }}
-      className="container mb-8 flex items-center justify-between"
+      className="container mb-8 flex w-full max-w-3xl items-center justify-between"
     >
       {/* <Icons.logo className="size-16 overflow-visible rounded-full border p-2 text-neutral-500 dark:text-neutral-400" /> */}
       <div className="flex items-center gap-4">
