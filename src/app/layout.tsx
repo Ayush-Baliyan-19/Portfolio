@@ -6,11 +6,11 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 
 import { ThemeProvider } from "@/components/theme-provider";
+import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { siteConfig } from "@/lib/constant";
 import { fonts } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
-
 export const metadata: Metadata = {
   title: {
     default: siteConfig.title,
@@ -33,6 +33,7 @@ const RootLayout = ({ children }: PropsWithChildren) => {
           fonts,
         )}
       >
+        <Toaster />
         <ThemeProvider attribute="class">
           <TooltipProvider delayDuration={10}>
             <main className="py-8 font-sans sm:pt-8 md:pt-16">{children}</main>
