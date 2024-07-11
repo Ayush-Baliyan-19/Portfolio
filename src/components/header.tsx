@@ -1,5 +1,5 @@
 "use client";
-import { PropsWithChildren, useEffect, useRef } from "react";
+import { PropsWithChildren, useEffect } from "react";
 import Image from "next/image";
 
 import { MotionHeader } from "./framer-motion";
@@ -15,19 +15,13 @@ type THeaderProps = PropsWithChildren<{
 }>;
 
 export const Header = ({ themeToggle = false, children }: THeaderProps) => {
-  const windowsRef = useRef<unknown>(null);
-  windowsRef.current = window;
   useEffect(() => {
-    if (windowsRef.current) {
-      window.addEventListener("resize", () => {
-        if (window.innerWidth > 640) {
-          document.getElementById("resume")?.classList.remove("hidden");
-        } else {
-          document.getElementById("resume")?.classList.add("hidden");
-        }
-      });
+    if (window.innerWidth > 640) {
+      document.getElementById("resume")?.classList.remove("hidden");
+    } else {
+      document.getElementById("resume")?.classList.add("hidden");
     }
-  });
+  }, []);
   return (
     <MotionHeader
       initial={{ y: -25, opacity: 0 }}
@@ -58,7 +52,7 @@ export const Header = ({ themeToggle = false, children }: THeaderProps) => {
           className="flex items-center justify-center gap-2 rounded p-2 text-neutral-800 dark:text-neutral-400"
         >
           <Icons.resume className=" text-neutral-500 dark:text-neutral-400" />
-          {window.innerWidth > 640 && <p id="resume">Resume</p>}
+          <p id="resume">Resume</p>
         </Button>
         {themeToggle ? <ThemeToggle /> : null}
       </div>
