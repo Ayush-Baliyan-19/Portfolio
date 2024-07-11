@@ -1,5 +1,5 @@
 "use client";
-import { PropsWithChildren } from "react";
+import { PropsWithChildren, useEffect, useRef } from "react";
 import Image from "next/image";
 
 import { MotionHeader } from "./framer-motion";
@@ -15,6 +15,19 @@ type THeaderProps = PropsWithChildren<{
 }>;
 
 export const Header = ({ themeToggle = false, children }: THeaderProps) => {
+  const windowsRef = useRef<unknown>(null);
+  windowsRef.current = window;
+  useEffect(() => {
+    if (windowsRef.current) {
+      window.addEventListener("resize", () => {
+        if (window.innerWidth > 640) {
+          document.getElementById("resume")?.classList.remove("hidden");
+        } else {
+          document.getElementById("resume")?.classList.add("hidden");
+        }
+      });
+    }
+  });
   return (
     <MotionHeader
       initial={{ y: -25, opacity: 0 }}
@@ -45,7 +58,7 @@ export const Header = ({ themeToggle = false, children }: THeaderProps) => {
           className="flex items-center justify-center gap-2 rounded p-2 text-neutral-800 dark:text-neutral-400"
         >
           <Icons.resume className=" text-neutral-500 dark:text-neutral-400" />
-          Resume
+          {window.innerWidth > 640 && <p id="resume">Resume</p>}
         </Button>
         {themeToggle ? <ThemeToggle /> : null}
       </div>
@@ -60,8 +73,8 @@ export const HeaderHeading = ({
   return (
     <h1
       className={cn(
-        "flex font-mono text-2xl font-semibold leading-6 tracking-tight text-neutral-900 dark:text-neutral-100",
         className,
+        "flex font-mono text-2xl font-semibold leading-6 tracking-tight text-neutral-900 dark:text-neutral-100",
       )}
       {...props}
     />
@@ -75,8 +88,8 @@ export const HeaderDescription = ({
   return (
     <p
       className={cn(
-        "text-sm font-medium text-neutral-500 dark:text-neutral-400",
         className,
+        "text-sm font-medium text-neutral-500 dark:text-neutral-400",
       )}
       {...props}
     />
