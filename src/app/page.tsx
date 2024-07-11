@@ -1,5 +1,6 @@
 import { ExternalLink } from "lucide-react";
 
+import { ContactForm } from "@/components/contact";
 import ExpCard from "@/components/experience-card";
 import { Footer } from "@/components/footer";
 import { Header, HeaderDescription, HeaderHeading } from "@/components/header";
@@ -22,6 +23,13 @@ import {
   SectionAProposText,
   SectionAProposTitle,
 } from "@/components/section-apropos";
+import {
+  SectionContact,
+  SectionContactContent,
+  SectionContactDescription,
+  SectionContactHeader,
+  SectionContactTitle,
+} from "@/components/section-contact";
 import {
   SectionExperience,
   SectionExperienceContent,
@@ -396,6 +404,18 @@ export default function Page() {
               })}
         </SectionExperienceContent>
       </SectionExperience>
+
+      <SectionContact>
+        <SectionContactHeader>
+          <SectionContactTitle>Get in touch</SectionContactTitle>
+          <SectionContactDescription>
+            Feel free to reach out to me for any queries or collaborations.
+          </SectionContactDescription>
+        </SectionContactHeader>
+        <SectionContactContent>
+          <ContactForm />
+        </SectionContactContent>
+      </SectionContact>
 
       <Footer />
     </>
