@@ -1,15 +1,16 @@
 "use client";
 import { useState } from "react";
 import axios from "axios";
-import { toast } from "sonner";
 
 import { Textarea } from "./ui/textarea";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
+import { useToast } from "@/components/ui/use-toast";
 
 export function ContactForm() {
+  const { toast } = useToast();
   const [userDetails, setUserDetails] = useState({
     name: "",
     email: "",
@@ -25,7 +26,11 @@ export function ContactForm() {
         message: Message,
       });
       if (response.data.Success) {
-        toast("Your message has been recieved , I will get back to you soon😸");
+        toast({
+          title: "Message Received!🎉",
+          description:
+            "Your message has been recieved , I will get back to you soon😸",
+        });
         console.log(response.data);
       }
     } catch (error) {
