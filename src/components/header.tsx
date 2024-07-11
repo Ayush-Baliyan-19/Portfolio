@@ -1,7 +1,6 @@
 "use client";
 import { PropsWithChildren } from "react";
 import Image from "next/image";
-import { useTheme } from "next-themes";
 
 import { MotionHeader } from "./framer-motion";
 import { Icons } from "./icons";
@@ -16,7 +15,6 @@ type THeaderProps = PropsWithChildren<{
 }>;
 
 export const Header = ({ themeToggle = false, children }: THeaderProps) => {
-  const { theme } = useTheme();
   return (
     <MotionHeader
       initial={{ y: -25, opacity: 0 }}
@@ -27,9 +25,7 @@ export const Header = ({ themeToggle = false, children }: THeaderProps) => {
       {/* <Icons.logo className="size-16 overflow-visible rounded-full border p-2 text-neutral-500 dark:text-neutral-400" /> */}
       <div className="flex items-center gap-4">
         <Image
-          src={
-            theme === "light" ? "/images/Me-Light.webp" : "/images/Me-Dark.webp"
-          }
+          src={"/images/Me.webp"}
           className="h-auto w-16 rounded-full border p-2 text-neutral-500 dark:text-neutral-400"
           width={64}
           height={64}
