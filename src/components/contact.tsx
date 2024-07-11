@@ -41,12 +41,12 @@ export function ContactForm() {
     <Card className="mx-auto max-w-full border-none bg-transparent">
       <CardContent>
         <div className="grid gap-4">
-          <div className="grid grid-cols-2 gap-4">
-            <div className="grid gap-2">
+          <div className="flex flex-wrap justify-between gap-4">
+            <div className="grid w-full gap-2">
               <Input
                 id="first-name"
                 placeholder="Name"
-                className="border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800"
+                className="w-full border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800"
                 value={userDetails.name}
                 onChange={(e) => {
                   setUserDetails({ ...userDetails, name: e.target.value });
@@ -54,12 +54,12 @@ export function ContactForm() {
                 required
               />
             </div>
-            <div className="grid gap-2">
+            <div className="grid w-full gap-2">
               <Input
                 id="email"
                 placeholder="Email"
                 required
-                className="border-neutral-200 bg-neutral-50  dark:border-neutral-700 dark:bg-neutral-800"
+                className="w-full border-neutral-200  bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800"
                 value={userDetails.email}
                 onChange={(e) => {
                   setUserDetails({ ...userDetails, email: e.target.value });
