@@ -325,7 +325,7 @@ export default function Page() {
               </ProjectCardFooter>
             </ProjectCardContent>
           </ProjectCard>
-          <ProjectCard animDelay={0.4}>
+          {/* <ProjectCard animDelay={0.4}>
             <ProjectCardImage
               src="/images/TempleHub.webp"
               width="1920"
@@ -354,6 +354,46 @@ export default function Page() {
                   <IconItem icon="firebase" />
                   <IconItem icon="aws" />
                   <IconItem icon="vercel" />
+                </IconsList>
+                <ProjectCardLinks>
+                  <ProjectCardLink
+                    href="https://www.templehub.store/"
+                    variant="primary"
+                  >
+                    Visit Website
+                    <ExternalLink className="ml-1 size-3" />
+                  </ProjectCardLink>
+                </ProjectCardLinks>
+              </ProjectCardFooter>
+            </ProjectCardContent>
+          </ProjectCard> */}
+          <ProjectCard animDelay={0.4}>
+            <ProjectCardImage
+              src="/images/CryptoNite.webp"
+              width="1920"
+              height="993"
+              alt="Project image"
+            />
+            <ProjectCardContent>
+              <ProjectCardTextContent>
+                <ProjectCardTitle>CryptoNite</ProjectCardTitle>
+                <ProjectCardDescription>
+                  Cryptonite is a web application built with Next.js that tracks
+                  various cryptocurrencies. It provides real-time updates and
+                  detailed information, including historical data and market
+                  trends, using the CoinGecko API. The application features
+                  interactive charts, a searchable coin list, and a draggable
+                  watchlist.
+                </ProjectCardDescription>
+              </ProjectCardTextContent>
+              <ProjectCardFooter>
+                <IconsList>
+                  <IconItem icon="nextjs" />
+                  <IconItem icon="typescript" />
+                  <IconItem icon="tailwindcss" />
+                  <IconItem icon="shadcnUI" />
+                  <IconItem icon="vercel" />
+                  <IconItem icon="coinGecko" />
                 </IconsList>
                 <ProjectCardLinks>
                   <ProjectCardLink
