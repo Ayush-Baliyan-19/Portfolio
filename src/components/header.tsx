@@ -47,7 +47,7 @@ export const Header = ({ themeToggle = false, children }: THeaderProps) => {
           variant="ghost"
           size="sm"
           onClick={() => {
-            window.open("/Ayush_Baliyan_Resume.pdf", "_blank");
+            window.open("/Resume.pdf", "_blank");
           }}
           className="flex items-center justify-center gap-2 rounded p-2 text-neutral-800 dark:text-neutral-400"
         >
