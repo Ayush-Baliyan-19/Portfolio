@@ -1,1 +1,1 @@
-self.importScripts("https://widgets.in.webengage.com/js/service-worker.js");
+self.importScripts('https://ssl.widgets.webengage.com/js/service-worker.js');
