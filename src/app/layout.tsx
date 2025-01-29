@@ -4,6 +4,7 @@ import { PropsWithChildren } from "react";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
+import { headers } from "next/headers";
 import Script from "next/script";
 
 import { ThemeProvider } from "@/components/theme-provider";
@@ -25,7 +26,8 @@ export const metadata: Metadata = {
   },
 };
 
-const RootLayout = ({ children }: PropsWithChildren) => {
+const RootLayout = async ({ children }: PropsWithChildren) => {
+  const nonce = (await headers()).get("x-nonce");
   return (
     <html lang="en" suppressHydrationWarning>
       <body
@@ -43,6 +45,7 @@ const RootLayout = ({ children }: PropsWithChildren) => {
           </TooltipProvider>
         </ThemeProvider>
         <Script
+          nonce={nonce || undefined}
           id="_webengage_script_tag"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
