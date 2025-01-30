@@ -1,4 +1,4 @@
-const withMDX = require('@next/mdx');
+const withMDX = require('@next/mdx')();
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -7,34 +7,4 @@ const nextConfig = {
   // Optionally, add any other Next.js config below
 };
 
-const configWithMDX = withMDX()(nextConfig);
-
-const cspHeader = `
-    default-src 'self';
-    script-src 'self' 'https://*.webengage.com';
-    style-src 'self';
-    img-src 'self' ;
-    font-src 'self';
-    object-src 'none';
-    base-uri 'self';
-    form-action 'self';
-    frame-ancestors 'none';
-    upgrade-insecure-requests;
-`;
-
-module.exports = {
-  ...configWithMDX,
-  async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: [
-          {
-            key: 'Content-Security-Policy',
-            value: cspHeader.replace(/\n/g, ''),
-          },
-        ],
-      },
-    ];
-  },
-};
+module.exports = withMDX(nextConfig);
