@@ -8,6 +8,8 @@ import Head from "next/head";
 import { headers } from "next/headers";
 import Script from "next/script";
 
+import { cspHeader } from "../../csp";
+
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -33,11 +35,7 @@ const RootLayout = ({ children }: PropsWithChildren) => {
     <html lang="en" suppressHydrationWarning>
       <Head>
         <meta property="csp-nonce" content={nonce} />
-        <meta
-          http-equiv="Content-Security-Policy"
-          content="script-src 'self' https://ssl.widgets.webengage.com;"
-          nonce={nonce}
-        />
+        <meta http-equiv="Content-Security-Policy" content={cspHeader} />
       </Head>
       <body
         className={cn(
