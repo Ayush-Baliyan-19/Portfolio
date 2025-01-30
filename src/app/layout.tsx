@@ -30,6 +30,12 @@ const RootLayout = async ({ children }: PropsWithChildren) => {
   const nonce = (await headers()).get("x-nonce");
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <meta
+          http-equiv="Content-Security-Policy"
+          content="script-src 'self' https://ssl.widgets.webengage.com;"
+        />
+      </head>
       <body
         className={cn(
           "min-h-screen bg-neutral-50 font-sans antialiased dark:bg-neutral-950",
