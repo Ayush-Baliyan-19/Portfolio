@@ -4,6 +4,7 @@ import { PropsWithChildren } from "react";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
+import Head from "next/head";
 import { headers } from "next/headers";
 import Script from "next/script";
 
@@ -26,16 +27,18 @@ export const metadata: Metadata = {
   },
 };
 
-const RootLayout = async ({ children }: PropsWithChildren) => {
-  const nonce = (await headers()).get("x-nonce");
+const RootLayout = ({ children }: PropsWithChildren) => {
+  const nonce = headers().get("x-nonce") || undefined;
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
+      <Head>
+        <meta property="csp-nonce" content={nonce} />
         <meta
           http-equiv="Content-Security-Policy"
           content="script-src 'self' https://ssl.widgets.webengage.com;"
+          nonce={nonce}
         />
-      </head>
+      </Head>
       <body
         className={cn(
           "min-h-screen bg-neutral-50 font-sans antialiased dark:bg-neutral-950",
