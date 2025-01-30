@@ -22,7 +22,7 @@ const cspHeader = `
     upgrade-insecure-requests;
 `;
 
-export default {
+module.exports = {
   ...configWithMDX,
   async headers() {
     return [
