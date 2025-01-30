@@ -1,5 +1,5 @@
 "use client";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import { ExternalLink } from "lucide-react";
 
 import { ContactForm } from "@/components/contact";

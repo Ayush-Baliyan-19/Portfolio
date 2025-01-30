@@ -1,4 +1,4 @@
-const withMDX = require('@next/mdx')();
+import withMDX from '@next/mdx';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -7,4 +7,34 @@ const nextConfig = {
   // Optionally, add any other Next.js config below
 };
 
-module.exports = withMDX(nextConfig);
+const configWithMDX = withMDX()(nextConfig);
+
+const cspHeader = `
+    default-src 'self';
+    script-src 'self';
+    style-src 'self';
+    img-src 'self' ;
+    font-src 'self';
+    object-src 'none';
+    base-uri 'self';
+    form-action 'self';
+    frame-ancestors 'none';
+    upgrade-insecure-requests;
+`;
+
+export default {
+  ...configWithMDX,
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'Content-Security-Policy',
+            value: cspHeader.replace(/\n/g, ''),
+          },
+        ],
+      },
+    ];
+  },
+};
