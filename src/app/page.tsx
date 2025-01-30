@@ -1,5 +1,5 @@
 "use client";
-// import { useEffect } from "react";
+import { useEffect } from "react";
 import { ExternalLink } from "lucide-react";
 
 import { ContactForm } from "@/components/contact";
@@ -52,24 +52,24 @@ import { StackBadge as SB } from "@/components/ui/stack-badge";
 import { experience } from "@/lib/constant";
 
 export default function Page() {
-  // const registerWebengageServiceWorker = () => {
-  //   if ("serviceWorker" in navigator) {
-  //     navigator.serviceWorker
-  //       .register("/service-worker.js")
-  //       .then((registration) => {
-  //         console.log(
-  //           "Service Worker registered with scope: ",
-  //           registration.scope,
-  //         );
-  //       })
-  //       .catch((error) => {
-  //         console.error("Service Worker registration failed:", error);
-  //       });
-  //   }
-  // };
-  // useEffect(() => {
-  //   registerWebengageServiceWorker();
-  // }, []);
+  const registerWebengageServiceWorker = () => {
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker
+        .register("/service-worker.js")
+        .then((registration) => {
+          console.log(
+            "Service Worker registered with scope: ",
+            registration.scope,
+          );
+        })
+        .catch((error) => {
+          console.error("Service Worker registration failed:", error);
+        });
+    }
+  };
+  useEffect(() => {
+    registerWebengageServiceWorker();
+  }, []);
   return (
     <>
       <Header themeToggle>
