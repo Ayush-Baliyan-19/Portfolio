@@ -11,7 +11,7 @@ const configWithMDX = withMDX()(nextConfig);
 
 const cspHeader = `
     default-src 'self';
-    script-src 'self';
+    script-src 'self' 'https://*.webengage.in';
     style-src 'self';
     img-src 'self' ;
     font-src 'self';
