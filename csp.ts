@@ -1,5 +1,5 @@
 export const nonce = Buffer.from(crypto.randomUUID()).toString("base64");
-export default function generateCsp(nonce: string) {
+export function generateCsp(nonce: string) {
   const csp = `
   default-src 'self';
   object-src 'none';

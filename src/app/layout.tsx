@@ -1,14 +1,15 @@
 import "@/styles/globals.css";
 
+import crypto from "crypto";
 import { PropsWithChildren } from "react";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import Head from "next/head";
-import { headers } from "next/headers";
 import Script from "next/script";
+import { v4 } from "uuid";
 
-import { cspHeader } from "../../csp";
+import { generateCsp } from "../../csp";
 
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/toaster";
@@ -29,13 +30,25 @@ export const metadata: Metadata = {
   },
 };
 
+function generateNonce() {
+  const hash = crypto.createHash("sha256");
+
+  hash.update(v4());
+  const nonce = hash.digest("base64");
+
+  return nonce;
+}
+
 const RootLayout = ({ children }: PropsWithChildren) => {
-  const nonce = headers().get("x-nonce") || undefined;
+  const nonce = generateNonce();
   return (
     <html lang="en" suppressHydrationWarning>
       <Head>
         <meta property="csp-nonce" content={nonce} />
-        <meta http-equiv="Content-Security-Policy" content={cspHeader} />
+        <meta
+          http-equiv="Content-Security-Policy"
+          content={generateCsp(nonce)}
+        />
       </Head>
       <body
         className={cn(
