@@ -1,13 +1,12 @@
 import "@/styles/globals.css";
 
-import crypto from "crypto";
 import { PropsWithChildren } from "react";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import Head from "next/head";
+import { headers } from "next/headers";
 import Script from "next/script";
-import { v4 } from "uuid";
 
 import { generateCsp } from "../../csp";
 
@@ -30,17 +29,8 @@ export const metadata: Metadata = {
   },
 };
 
-function generateNonce() {
-  const hash = crypto.createHash("sha256");
-
-  hash.update(v4());
-  const nonce = hash.digest("base64");
-
-  return nonce;
-}
-
 const RootLayout = ({ children }: PropsWithChildren) => {
-  const nonce = generateNonce();
+  const nonce = headers().get("x-nonce") || "";
   return (
     <html lang="en" suppressHydrationWarning>
       <Head>
